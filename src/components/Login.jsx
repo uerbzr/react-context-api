@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { LoginContext } from "../App";
 
-function Login({ loggedInAs, setLoggedInAs }) {
+function Login() {
+  const { loggedInAs, setLoggedInAs } = useContext(LoginContext);
+
   const [formData, setFormData] = useState({
     username: "",
   });

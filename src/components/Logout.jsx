@@ -1,6 +1,8 @@
-import React from "react";
+import Reac, { useState, useContext } from "react";
+import { LoginContext } from "../App";
 
-function Logout({ setLoggedInAs }) {
+function Logout() {
+  const { setLoggedInAs } = useContext(LoginContext);
   const handleLogout = (e) => {
     setLoggedInAs("");
   };
