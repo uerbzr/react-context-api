@@ -8,9 +8,7 @@ function App() {
 
   return (
     <>
-      <LoginContext.Provider
-        value={{ loggedInAs: loggedInAs, setLoggedInAs: setLoggedInAs }}
-      >
+      <LoginContext.Provider value={{ loggedInAs, setLoggedInAs }}>
         <h1>{loggedInAs ? loggedInAs : "Anonymous"}</h1>
         {!loggedInAs && <Login />}
         {loggedInAs && <Logout />}
